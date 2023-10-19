@@ -1,0 +1,603 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    background-color: lightgray;
+}
+
+.blackBackground {
+    background-color: #909090;
+    animation-name: backgroundChange;
+    animation-delay: 2.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-duration: 0.8s;
+}
+
+.restartButton {
+    position: fixed;
+    left: 5vw;
+    top: 5vh;
+    font-family: ff-providence-sans-web-pro, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 15px;
+    padding: 10px;
+    border: 2px solid darkred;
+    border-radius:10%;
+}
+
+.restartButton:hover {
+    opacity: 50%;
+}
+
+.restartButton a {
+    text-decoration: none;
+    color: darkred;
+}
+
+/* Flex Parents */
+
+.title {
+    display:flex;
+    flex-direction: row;
+    font-family: ff-providence-sans-web-pro, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 100px;
+    justify-content: center;
+    margin-top: 40vh;
+    text-decoration: none;
+    color: black;
+}
+
+.title:hover {
+    color: darkred;
+}
+
+#maybe {
+    font-family: ff-providence-sans-web-pro, sans-serif;
+    font-weight: 400;
+    padding-bottom:25px;
+    font-style: normal;
+    font-size: 50px;
+    position: absolute;
+    top: 30vh;
+    left: 35vw;
+}
+
+#d2d {
+    display:flex;
+    flex-direction: column;
+    font-family: ff-providence-sans-web-pro, sans-serif;
+    font-weight: 700;
+    padding: 25px 0px 25px 0px;
+    font-style: normal;
+    font-size: 80px;
+    position: absolute;
+    top: 40vh;
+    left: 35vw;
+}
+
+#d2d:hover {
+    animation-name: disappear;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-direction:alternate;
+}
+
+#d2d a {
+    text-decoration: none;
+    color:darkred;
+    font-size: 120px;
+}
+
+
+/* Text */
+
+h2 {
+    font-family: ff-providence-sans-web-pro, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 30px;
+    position: absolute;
+    left: 40vw;
+    top: 60vh;
+
+}
+
+.standardLyrics {
+    font-family: ff-providence-sans-web-pro, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 42px;
+    padding-top: 15px;
+}
+
+#meDown1 {
+    font-family: ff-providence-sans-web-pro, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 42px;
+    position: absolute;
+    top: 42vh;
+    left: 37vw;
+    animation-name: meDown1;
+    animation-delay: 0.5s;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+}
+
+#meDown2 {
+    font-family: ff-providence-sans-web-pro, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 42px;
+    position: absolute;
+    top: 42vh;
+    left: 72vw;
+    animation-name: meDown2;
+    animation-delay: 1.3s;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+}
+
+
+
+#break1 {
+    font-family: chantal, sans-serif;
+    font-weight: 600;
+    font-style: normal; 
+    font-size: 80px;
+    color:darkred;
+    position: absolute;
+    top:40vh;
+    left: 20vw;
+}
+
+#break2 {
+    font-family: chantal, sans-serif;
+    font-weight: 600;
+    font-style: normal; 
+    font-size: 80px;
+    color:darkred;
+    position: absolute;
+    top:40vh;
+    left: 55vw;
+}
+
+#makeMe {
+    font-family: ff-providence-sans-web-pro, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 70px;
+    position: relative;
+    top: 1500px;
+    left: 30vw;
+    padding-bottom: 500px;
+}
+
+#better {
+    font-family: chantal, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 80px;
+    position: absolute;
+    top: 1500px; 
+    left: 57vw;
+}
+
+#better a {
+    text-decoration: none;
+    color: black;
+}
+
+#better a:hover {
+    text-decoration: none;
+    color: darkred;
+    font-style: italic;
+}
+
+#iConfess {
+    font-family: ff-providence-sans-web-pro, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 100px;
+    position: absolute;
+    top: 10vh;
+    left: 20vw;
+}
+
+#aMess {
+    display: flex;
+    font-family: ff-providence-sans-web-pro, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 100px;
+    position: absolute;
+    top: 30vh;
+    left: 50vw;
+}
+
+#messM {
+    transition-duration: 0.5s;
+    transition-property: transform;
+    padding-left: 30px;
+    color: darkred;
+}
+
+#aMess:hover #messM {
+    transform: translate(-5vw, -15vh) rotate(5deg) skew(-15deg);
+}
+
+#messE {
+    transition-duration: 0.5s;
+    transition-property: transform;
+    color: darkred;
+}
+
+#aMess:hover #messE {
+    transform: translate(2vw, 10vh) rotate(-5deg) skew(25deg);
+}
+
+#messS {
+    transition-duration: 0.5s;
+    transition-property: transform;
+    color: darkred;
+}
+
+#aMess:hover #messS {
+    transform: translate(3vw, -5vh) rotate(-7deg) skew(20deg, 15deg);
+}
+
+#messS2 {
+    transition-duration: 0.5s;
+    transition-property: transform;
+    color: darkred;
+}
+
+#aMess:hover #messS2 {
+    transform: translate(5vw, 7vh) rotate(-10deg) skew(-25deg, -5deg);
+}
+
+#someKind {
+    display: flex;
+    font-family: ff-providence-sans-web-pro, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 100px;
+    position: absolute;
+    top: 65vh;
+    left: 10vw;
+}
+
+#error {
+    font-family: chantal, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    margin-left: 100px;
+}
+
+#error:hover {
+    animation-name: errorAnim;
+    animation-duration: 0.3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+}
+
+#error a {
+    text-decoration: none;
+    color: darkred;
+}
+
+
+
+#weAre {
+    font-family: ff-providence-sans-web-pro, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 75px;
+    color: darkred;
+    position: absolute;
+    top: 20vh;
+    left: 10vw;
+    opacity: 0;
+    animation-name: fadeinOut;
+    animation-duration: 0.8s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.5s;
+}
+
+#just {
+    font-family: ff-providence-sans-web-pro, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 75px;
+    color: darkred;
+    position: absolute;
+    top: 80vh;
+    left: 25vw;
+    opacity: 0;
+    animation-name: fadeinOut;
+    animation-duration: 0.8s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.8s;
+}
+
+#letterA {
+    font-family: ff-providence-sans-web-pro, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 75px;
+    color: darkred;
+    position: absolute;
+    top: 10vh;
+    left: 45vw;
+    opacity: 0;
+    animation-name: fadeinOut;
+    animation-duration: 0.8s;
+    animation-fill-mode: forwards;
+    animation-delay: 1.1s;
+}
+
+#room {
+    font-family: ff-providence-sans-web-pro, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 75px;
+    color: darkred;
+    position: absolute;
+    top: 85vh;
+    left: 50vw;
+    opacity: 0;
+    animation-name: fadeinOut;
+    animation-duration: 0.8s;
+    animation-fill-mode: forwards;
+    animation-delay: 1.4s;
+}
+
+#full {
+    font-family: ff-providence-sans-web-pro, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 75px;
+    color: darkred;
+    position: absolute;
+    top: 30vh;
+    left: 75vw;
+    opacity: 0;
+    animation-name: fadeinOut;
+    animation-duration: 0.8s;
+    animation-fill-mode: forwards;
+    animation-delay: 1.7s;
+}
+
+#of {
+    font-family: ff-providence-sans-web-pro, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 75px;
+    color: darkred;
+    position: absolute;
+    top: 65vh;
+    left: 85vw;
+    opacity: 0;
+    animation-name: fadeinOut;
+    animation-duration: 0.8s;
+    animation-fill-mode: forwards;
+    animation-delay: 2.0s;
+    animation-direction: alternate;
+}
+
+#strangers {
+    font-family: ff-providence-sans-web-pro, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 100px;
+    color: darkred;
+    position: absolute;
+    top: 40vh;
+    left: 35vw;
+    opacity: 0;
+    animation-name: strangersAnim;
+    animation-delay: 2.5s;
+    animation-duration: 0.8s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#strangers a:any-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Intro Styles */
+
+#sS {
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+}
+
+.title:hover #sS {
+    transform: translate(-30vw, -20vh) rotate(-40deg);
+}
+
+#sT {
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+}
+
+.title:hover #sT {
+    transform: translate(-20vw, 15vh) rotate(30deg);
+}
+
+#sR {
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+}
+
+.title:hover #sR {
+    transform: translate(-10vw, -30vh) rotate(-70deg);
+}
+
+#sA {
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+}
+
+.title:hover #sA {
+    transform: translate(0vw, 25vh) rotate(-45deg);
+}
+
+#sN {
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+}
+
+.title:hover #sN {
+    transform: translate(8vw, -10vh) rotate(35deg);
+}
+
+#sG {
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+}
+
+.title:hover #sG {
+    transform: translate(10vw, -30vh) rotate(-50deg);
+}
+
+#sE {
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+}
+
+.title:hover #sE {
+    transform: translate(20vw, 25vh) rotate(35deg);
+}
+
+#sRR {
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+}
+
+.title:hover #sRR {
+    transform: translate(25vw, -5vh) rotate(-15deg);
+}
+
+#sSS {
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+}
+
+.title:hover #sSS {
+    transform: translate(30vw, 35vh) rotate(40deg);
+}
+
+/* Animations */
+
+@keyframes fadeinOut {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 100;
+    }
+    100% {
+        opacity:0;
+    }
+}
+
+@keyframes strangersAnim {
+    from {
+        opacity: 100%;
+        color: darkred;
+    }
+    to {
+        opacity: 100;
+        color: #909090;
+    }
+}
+
+@keyframes backgroundChange {
+    from {
+        background-color: #909090;
+    }
+    to {
+        background-color: darkred;
+    }
+}
+
+@keyframes meDown1 {
+    from {
+        top: 42vh;
+        left: 37vw;
+        transform: rotate(0deg);
+    }
+    to {
+        top: 95vh;
+        left: 39vw;
+        transform: rotate(10deg);
+    }
+}
+
+@keyframes meDown2 {
+    from {
+        top: 42vh;
+        left: 72vw;
+        transform: rotate(0deg);
+    }
+    to {
+        top: 95vh;
+        left: 70vw;
+        transform: rotate(-5deg);
+    }
+}
+
+@keyframes errorAnim {
+    0% {
+        transform: translate(-3vw, 5vh) skew(12deg, 15deg);
+    }
+    25% {
+        transform: translate(5vw, -3vh) skew(-5deg, 10deg) rotate(-45deg);
+    }
+    50% {
+        transform: translate(-8vw, 7vh) skew(-35deg, -25deg) rotate(-10deg)
+    }
+    75% {
+        transform: translate(5vw, -3vh) skew(45deg, -35deg), rotate(25deg)
+    }
+    100% {
+        transform: translate(-3vw, 5vh) skew(12deg, 15deg);
+    }
+}
+
+@keyframes disappear {
+    0%{
+        opacity: 100%;
+    }
+    25%{
+        opacity: 50%;
+    }
+    50%{
+        opacity: 75%;
+    }
+    75%{
+        opacity: 0%;
+    }
+    100%{
+        opacity:100%;
+    }
+}
